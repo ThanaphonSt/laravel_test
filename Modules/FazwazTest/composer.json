@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/fazwaztest",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\FazwazTest\\Providers\\FazwazTestServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\FazwazTest\\": ""
+        }
+    }
+}

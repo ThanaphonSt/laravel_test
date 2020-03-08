@@ -1,0 +1,13 @@
+{
+    "name": "FazwazTest",
+    "alias": "fazwaztest",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\FazwazTest\\Providers\\FazwazTestServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
