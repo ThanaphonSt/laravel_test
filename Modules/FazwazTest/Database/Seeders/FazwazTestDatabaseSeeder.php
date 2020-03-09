@@ -14,8 +14,11 @@ class FazwazTestDatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        // Model::unguard();
 
         // $this->call("OthersTableSeeder");
+        // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakePropertyTableSeeder");
+        // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakePropertyTypeTableSeeder");
+        $this->call("Modules\FazwazTest\Database\Seeders\SeedFakeStatusTableSeeder");
     }
 }
