@@ -17,14 +17,14 @@ class SeedFakeStatusTableSeeder extends Seeder
     {
         // Model::unguard();
 
-        // $active = factory(Status::class)->create([
-        //     'status' => 'Active',
-        // ]);
-        // $house = factory(Status::class)->create([
-        //     'status' => 'Inactive',
-        // ]);
-        // $land = factory(Status::class)->create([
-        //     'status' => 'Draft',
-        // ]);
+        $active = factory(Status::class)->create([
+            'status' => 'Active',
+        ]);
+        $inactive = factory(Status::class)->create([
+            'status' => 'Inactive',
+        ]);
+        $draft = factory(Status::class)->create([
+            'status' => 'Draft',
+        ]);
     }
 }

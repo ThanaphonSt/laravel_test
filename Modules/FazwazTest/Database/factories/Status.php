@@ -4,7 +4,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(Modules\FazwazTest\Entities\PropertyType::class, function (Faker $faker) {
+$factory->define(Modules\FazwazTest\Entities\Status::class, function (Faker $faker) {
     return [
         //
     ];
