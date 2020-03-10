@@ -5,8 +5,8 @@
 use Faker\Generator as Faker;
 
 $factory->define(Modules\FazwazTest\Entities\TypeOfProperty::class, function (Faker $faker) {
-    $arrayType = array("Condo"=>"1","House"=>"2","Land"=>"3");
+    // $arrayType = array("Condo"=>"1","House"=>"2","Land"=>"3");
     return [
-        'type' => array_rand($arrayType,1)
+        // 'property_type' => array_rand($arrayType,1)
     ];
 });
