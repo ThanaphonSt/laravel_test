@@ -13,12 +13,16 @@ class CreateRegionsTable extends Migration
      */
     public function up()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('regions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('region');
+            $table->bigInteger('country_id')->unsigned();
+            $table->foreign('country_id')->references('id')->on('countries');
 
             $table->timestamps();
         });
+        Schema::enableForeignKeyConstraints();
     }
 
     /**
@@ -28,6 +32,8 @@ class CreateRegionsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('regions');
+        Schema::enableForeignKeyConstraints();
     }
 }

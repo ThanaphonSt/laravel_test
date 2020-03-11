@@ -18,12 +18,5 @@ use Illuminate\Http\Request;
 // });
 
 Route::group(['prefix'=>'fazwaz'], function() {
-    // Route::post('{account_id}','ApiAccountController@showAccount');
-    // Route::post('{account_id}/balances','ApiAccountController@showAccountBalance');
-    // Route::post('{account_id}/positions','ApiAccountController@showAccountPosition');
-    // Route::post('{account_id}/deals','ApiAccountController@showAccountDeal');
-    // Route::post('{account_id}/orders','ApiAccountController@showAccountOrder');
-    Route::get("cont/", function(){
-        return 'test';
-    });
+    Route::get("properties/", 'PropertyController@showProperty');
 });

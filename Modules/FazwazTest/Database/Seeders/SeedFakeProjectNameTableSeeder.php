@@ -18,13 +18,7 @@ class SeedFakeProjectNameTableSeeder extends Seeder
         // Model::unguard();
 
         // $this->call("OthersTableSeeder");
-        $projectName = factory(ProjectName::class, 20)->create();
-        // $faker = Faker::create();
-        // foreach(range(1,10000) as $index){
-        //     $faker->seed(10);
-        //     DB::table('users')->insert([
-	    //         'project_name' => $faker->name,
-	    //     ]);
-        // }
+        $projectName = factory(ProjectName::class, 10)->create();
+      
     }
 }

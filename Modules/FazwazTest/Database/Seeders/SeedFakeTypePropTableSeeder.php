@@ -19,13 +19,13 @@ class SeedFakeTypePropTableSeeder extends Seeder
 
         // $propertyType = factory(TypeOfProperty::class, 3)->create();
         $condo = factory(TypeOfProperty::class)->create([
-            'type' => 'Condo',
+            'property_type' => 'Condo',
         ]);
         $house = factory(TypeOfProperty::class)->create([
-            'type' => 'House',
+            'property_type' => 'House',
         ]);
         $land = factory(TypeOfProperty::class)->create([
-            'type' => 'Land',
+            'property_type' => 'Land',
         ]);
     }
 }

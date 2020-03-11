@@ -16,7 +16,6 @@ class CreateTypeOfPropertiesTable extends Migration
         Schema::create('type_of_properties', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('property_type');
-
             $table->timestamps();
         });
     }
