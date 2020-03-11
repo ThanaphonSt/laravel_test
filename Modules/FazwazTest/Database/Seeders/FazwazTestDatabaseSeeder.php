@@ -21,6 +21,6 @@ class FazwazTestDatabaseSeeder extends Seeder
         // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakePropertyTypeTableSeeder");
         // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakeTypePropTableSeeder");
         // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakeStatusTableSeeder");
-        $this->call("Modules\FazwazTest\Database\Seeders\SeedFakeProjectNameTableSeeder");
+        // $this->call("Modules\FazwazTest\Database\Seeders\SeedFakeProjectNameTableSeeder");
     }
 }
