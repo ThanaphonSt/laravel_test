@@ -17,6 +17,6 @@ class SeedFakePropertyTableSeeder extends Seeder
     {
         // Model::unguard();
 
-        $property = factory(Property::class, 10)->create();
+        $property = factory(Property::class, 9990)->create();
     }
 }

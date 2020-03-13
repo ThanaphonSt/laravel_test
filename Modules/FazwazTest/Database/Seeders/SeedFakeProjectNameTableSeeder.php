@@ -18,7 +18,7 @@ class SeedFakeProjectNameTableSeeder extends Seeder
         // Model::unguard();
 
         // $this->call("OthersTableSeeder");
-        $projectName = factory(ProjectName::class, 10)->create();
+        $projectName = factory(ProjectName::class, 99990)->create();
       
     }
 }
