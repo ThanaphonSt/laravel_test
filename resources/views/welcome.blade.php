@@ -26,7 +26,7 @@
 </style>
 <body>
 
-<div class="container">
+<div class="container" id="app">
     <div class="col-xs-12 text-center">
         <h1>Properties</h1>
     </div>
@@ -36,27 +36,36 @@
         </div>
     </div>
     <template id="template-property">
-        <div class="card">
-            <div class="card-title">@{{property.title}}</div>
-            <!-- <div class="card-subtitle mb-2 text-muted">@{{property.project_name}}</div>
-            <p class="card-text"> @{{property.description}}</p> -->
+        <div class="card text-left">
+            <div class="card-title text-center"><b>@{{property.title}}</b></div>
+            <div class="card-text"><b>Project Name :</b>@{{property.project_name}}</div>
+            <div class="card-text"><b>Property type: </b> @{{property.property_type}}</div>
+            <div class="card-text"><b>Description: </b> @{{property.description}}</div>
+            <div class="card-text"><b>Country: </b> @{{property.country}}</div>
+
+            <div class="card-text"><b>Status: </b> @{{property.status}}</div>
+            <div class="card-text"><b>For Sale: </b> @{{property.for_sale}}</div>
+            <div class="card-text"><b>For Rent: </b> @{{property.for_rent}}</div>
+            <div class="card-text"><b>Bedroom: </b> @{{property.bedroom}}</div>
+            <div class="card-text"><b>Bathroom: </b> @{{property.bathroom}}</div>
         </div>
     </template>
-    <div class="text-right">
-        <div class="pagination">
-            <button class="btn btn-default" @click="fetchproperties(pagination.prev_page_url)"
-                    :disabled="!pagination.prev_page_url">
-                Previous
-            </button>
-            <span>Page @{{pagination.current_page}} of @{{pagination.last_page}}</span>
-            <button class="btn btn-default" @click="fetchproperties(pagination.next_page_url)"
-                    :disabled="!pagination.next_page_url">Next
-            </button>
+    <div class="col-xs-12">
+        <div class='row'>
+
+            <div class="text-right col-xs-12 pagination text-center">
+                <button class="btn btn-default" @click="fetchproperties(pagination.prev_page_url)"
+                        :disabled="!pagination.prev_page_url">
+                    Previous
+                </button>
+                <span>Page @{{pagination.current_page}} of @{{pagination.last_page}}</span>
+                <button class="btn btn-default" @click="fetchproperties(pagination.next_page_url)"
+                        :disabled="!pagination.next_page_url">Next
+                </button>
+            </div>
         </div>
-    </div>
 </div>
 
-<v-paginator :resource.sync="stories" :resource_url="api/stories"></v-paginator>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.7.0/vue-resource.js"></script>
 <script type="text/javascript">
@@ -69,7 +78,9 @@
         el: '.container',
         data: {
             properties: [],
-            pagination: {}
+            pagination: {},
+            sortByBedRoom : true,
+            sort: 'bed room'
         },
         ready: function () {
             this.fetchproperties()
@@ -77,6 +88,7 @@
         methods: {
             fetchproperties: function (page_url) {
                 let vm = this;
+                console.log('vm:',vm)
                 page_url = page_url || '/api/fazwaz/properties'
                 this.$http.get(page_url)
                     .then(function (response) {
